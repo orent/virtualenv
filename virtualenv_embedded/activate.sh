@@ -16,12 +16,7 @@ deactivate () {
         unset _OLD_VIRTUAL_PYTHONHOME
     fi
 
-    # This should detect bash and zsh, which have a hash command that must
-    # be called to get it to forget past commands.  Without forgetting
-    # past commands the $PATH changes we made may not be respected
-    if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
-        hash -r 2>/dev/null
-    fi
+    hash -r 2>/dev/null
 
     if [ -n "$_OLD_VIRTUAL_PS1" ] ; then
         PS1="$_OLD_VIRTUAL_PS1"
@@ -72,9 +67,4 @@ fi
 
 alias pydoc="python -m pydoc"
 
-# This should detect bash and zsh, which have a hash command that must
-# be called to get it to forget past commands.  Without forgetting
-# past commands the $PATH changes we made may not be respected
-if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
-    hash -r 2>/dev/null
-fi
+hash -r 2>/dev/null
